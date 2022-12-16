@@ -11,47 +11,35 @@ public class SystemEkspercki {
 
         System.out.println("Czy masz skórę suchą?"+TakLubNie);
         String Przetluszczona = ("Czy masz skórę przetłuszczoną?"+TakLubNie);
-        TakNie();
+        boolean odpowiedz1 = TakNie();
+        if (odpowiedz1)
+                System.out.println("dupa");
+        else
+            System.out.println("biskupa");
 
 
 
     }
 
-    private static void TakNie() {
+    private static boolean TakNie() {
         for(;;) {
             String error ="proszę napisać tak lub nie";
             Scanner scan = new Scanner(System.in);
             String text = scan.nextLine();
-            //System.out.println(text.equals(tak));
 
-            if (text.equals("tak")){
-                System.out.println("udało się");
-                break;}
-            if (text.equals("nie")){
-                System.out.println("nie udało się");
-                Tlusta();
-                break;}
-            System.out.println(error);
+
+            if (text.equals("tak")) {
+                return true;
+                }
+            else if (text.equals("nie")){
+                return false;
+                }
+            else System.out.println(error);
+
         }
     }
 
-    private static void Tlusta() {
-        for(;;) {
 
-            Scanner scan = new Scanner(System.in);
-            String text = scan.nextLine();
-            //System.out.println(text.equals(tak));
-
-            if (text.equals("tak")){
-                System.out.println("udało się");
-                break;}
-            if (text.equals("nie")){
-                System.out.println("nie udało się");
-                Tlusta();
-                break;}
-            System.out.println("error");
-        }
-    }
 }
 
 
