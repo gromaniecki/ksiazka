@@ -7,11 +7,11 @@ public class SystemEkspercki {
 
     public static void main(String [] args){
 
-        out.println("Witamy w systemie ekperckim pomagającym wybrać odpowiedni rodzaj maseczki do twojej twarzy");
+        out.println("Witamy w systemie ekperckim pomagającym wybrać odpowiedni rodzaj twojej cery");
         out.println("Grzegorz Romaniecki - AHE 2002 \n \n");
-        String TakLubNie = "\nproszę o odpowiedź tak lub nie\n";
 
-        out.println("Czy masz cienka skore?"+TakLubNie);
+
+        out.println("Czy masz cienką skórę?\nproszę o odpowiedź tak lub nie\n");
         boolean response = TakNie();
         if (response) {
             naczynka();
@@ -21,7 +21,7 @@ public class SystemEkspercki {
     }
 
     private static void matowa() {
-        out.println("Czy masz skore matowa? \nproszę o odpowiedź tak lub nie\n");
+        out.println("Czy masz skórę matową? \nproszę o odpowiedź tak lub nie\n");
         boolean response = TakNie();
         if (response) {
             skoraGladka();
@@ -31,7 +31,7 @@ public class SystemEkspercki {
     }
 
     private static void skoraGladka() {
-        out.println("Czy masz gladka skore? \nproszę o odpowiedź tak lub nie\n");
+        out.println("Czy masz gładką skórę? \nproszę o odpowiedź tak lub nie\n");
         boolean response = TakNie();
         if (response) {
             ceraNormalna();
@@ -49,17 +49,8 @@ public class SystemEkspercki {
             ceraNormalna();
         }
     }
-
-    private static void ceraDojrzala() {
-        out.println("Masz cere dojrzala");
-    }
-
-    private static void ceraNormalna() {
-        out.println("Masz cere normalna");
-    }
-
     private static void naturalneSwiecenie() {
-        out.println("Czy twoja skora naturalnie swieci? \nproszę o odpowiedź tak lub nie\n");
+        out.println("Czy twoja skóra naturalnie świeci? \nproszę o odpowiedź tak lub nie\n");
         boolean response = TakNie();
         if (response) {
             ceraNaczyniowa();
@@ -67,11 +58,6 @@ public class SystemEkspercki {
             zaskorniki();
         }
     }
-
-    private static void ceraNaczyniowa() {
-        out.println("Masz cere naczyniowa");
-    }
-
     private static void naczynka() {
         out.println("Czy masz widoczne naczynka? \nproszę o odpowiedź tak lub nie\n");
         boolean response = TakNie();
@@ -81,13 +67,8 @@ public class SystemEkspercki {
             ceraSucha();
         }
     }
-
-    private static void ceraSucha() {
-        out.println("Masz cere sucha");
-    }
-
     private static void zaskorniki() {
-        out.println("Czy masz zaskorniki? \nproszę o odpowiedź tak lub nie\n");
+        out.println("Czy masz zaskórniki? \nproszę o odpowiedź tak lub nie\n");
         boolean response = TakNie();
         if (response) {
             ceraTlusta();
@@ -95,11 +76,6 @@ public class SystemEkspercki {
             zaczerwienienia();
         }
     }
-
-    private static void ceraTlusta() {
-        out.println("Masz cere tlusta");
-    }
-
     private static void zaczerwienienia() {
         out.println("Czy masz widoczne zaczerwnienienia? \nproszę o odpowiedź tak lub nie\n");
         boolean response = TakNie();
@@ -109,17 +85,7 @@ public class SystemEkspercki {
             ceraMieszana();
         }
     }
-
-    private static void ceraMieszana() {
-        out.println("Masz cere mieszana");
-    }
-
-    private static void ceraWrazliwa() {
-        out.println("Masz cere wrazliwa");
-    }
-
-
-
+    //checker Tak // Nie
     private static boolean TakNie() {
         for(;;) {
             String error ="proszę napisać tak lub nie";
@@ -129,14 +95,40 @@ public class SystemEkspercki {
 
             if (text.equals("tak")) {
                 return true;
-                }
+            }
             else if (text.equals("nie")){
                 return false;
-                }
+            }
             else out.println(error);
 
         }
     }
+    //odpowiedzi
+    private static void ceraDojrzala() {
+        out.println("Masz cerę dojrzałą");
+    }
+    private static void ceraNormalna() {
+        out.println("Masz cerę normalną");
+    }
+    private static void ceraNaczyniowa() {
+        out.println("Masz cerę naczyniową");
+    }
+    private static void ceraSucha() {
+        out.println("Masz cerę suchą");
+    }
+    private static void ceraTlusta() {
+        out.println("Masz cerę tłustą");
+    }
+    private static void ceraMieszana() {
+        out.println("Masz cerę mieszaną");
+    }
+    private static void ceraWrazliwa() {
+        out.println("Masz cerę wrażliwą");
+    }
+
+
+
+
 
 
 }
